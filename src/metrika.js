@@ -33,11 +33,11 @@
           console.warn('You should provide counter id to use Yandex metrika counter');
           return;
         }
-        var name = 'yandex_metrika_callbacks';
+        var name = 'yandex_metrika_callbacks2';
         window[name] = window[name] || [];
         window[name].push(function() {
           try {
-            window[self.counterName] = new Ya.Metrika(counterConfig);
+            window[self.counterName] = new Ya.Metrika2(counterConfig);
           } catch(e) {}
         });
 
@@ -46,7 +46,7 @@
           f = function () { n.parentNode.insertBefore(s, n); };
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'https://mc.yandex.ru/metrika/watch.js';
+        s.src = 'https://mc.yandex.ru/metrika/tag.js';
 
         if (window.opera == '[object Opera]') {
           document.addEventListener('DOMContentLoaded', f, false);
