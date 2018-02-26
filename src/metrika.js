@@ -5,6 +5,7 @@
       accurateTrackBounce: true,
       webvisor: false,
       trackHash: true,
+      cdn: false,
       ut: 'noindex'
     };
 
@@ -46,7 +47,7 @@
           f = function () { n.parentNode.insertBefore(s, n); };
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'https://mc.yandex.ru/metrika/tag.js';
+        s.src = counterConfig.cdn ? 'https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js' : 'https://mc.yandex.ru/metrika/tag.js';
 
         if (window.opera == '[object Opera]') {
           document.addEventListener('DOMContentLoaded', f, false);
